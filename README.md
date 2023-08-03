@@ -1,2 +1,2 @@
 # mmc6278-9-9-dalton-kaeli
-COME BACK AND UPDATE THIS
+App to seach movie information, and add movies to your list.
