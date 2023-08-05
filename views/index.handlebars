@@ -1,7 +1,22 @@
-{{> header}}
-  <main>
-  <h1>This is the home page!</h1>
-  <p>Currently, you are {{#unless isLoggedIn}} NOT {{/unless}} logged in.</p>
-  <p>You should {{#unless isLoggedIn}}NOT{{/unless}} be able to access <a href="/private">this page</a>.</p>
-  <p>Use the header above to {{#if isLoggedIn}} logout{{else}} login or create an account{{/if}}.</p>
+{{#if isLoggedIn}}
+  {{> header}}
+{{/if}}
+{{#unless isLoggedIn}}
+<a class="site-logo" href="/">
+  <h1>Show Off Your Pet!</h1>
+</a>
+{{/unless}}
+<main>
+  <div>
+  {{> cat}}
+  </div>
+<button class="btn">
+  <a href="/pets"  class="main-page">See Our Pets</a> 
+</button>
+<div>
+  {{>dog}}
+</div>
 </main>
+<script>
+
+</script>

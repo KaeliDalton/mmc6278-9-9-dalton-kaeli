@@ -1,11 +1,11 @@
-# MySQL Project Starter
+# MongoDB Project Starter
 
 (**NOTE:** View a rendered version of this file in VS Code with `ctrl-shift-v` or `cmd-shift-v`)
 
 &nbsp;
 ## Introduction
 
-This is folder contains a starter project template for an application that uses Node, Express, Handlebars, MySQL. The starter code implements basic authentication and organizes files and concerns according to the Model View Controller pattern.
+This is folder contains a starter project template for an application that uses Node, Express, Handlebars, and MongoDB. The starter code implements basic authentication and organizes files and concerns according to the Model View Controller pattern.
 
 &nbsp;
 ## Setup
@@ -35,4 +35,4 @@ Then, to run the application locally, use:
 npm run dev
 ```
 
-This will start a new Docker container with MySQL and run the contents of the `/schema` folder against the database.
+This will start a new Docker container with MongoDB and run the `/seed/seed.js` file against the database.

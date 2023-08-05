@@ -1,0 +1,17 @@
+{{!-- {{> header}} --}}
+<a class="site-logo" href="/">
+  <h1>Show Off Your Pet!</h1>
+</a>
+<main>
+<h2>Your Pet </h2>
+{{#each pets}}
+  {{> info}}
+{{/each}}
+{{#if isCat}}
+{{> cat}}
+{{/if}}
+{{#if isDog}}
+{{> dog}}
+{{/if}}
+<button src="/form,">Add Your Pet!</button>
+</main>

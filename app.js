@@ -2,25 +2,32 @@ require("dotenv").config();
 const express = require("express");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
-const MySQLStore = require("express-mysql-session")(session);
-const connection = require("./config/connection");
+const MongoDBStore = require("connect-mongodb-session")(session);
+const { MONGODB_URI } = require("./config/connection");
 const apiRoutes = require("./routes/apiRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
 const app = express();
 
+const store = new MongoDBStore({
+  uri: MONGODB_URI,
+  collection: "sessions",
+});
 
-const sessionStore = new MySQLStore({}, connection);
+// Catch errors
+store.on("error", function (error) {
+  console.log(error);
+});
+
 app.use(
   session({
-    key: "session_cookie",
     secret: process.env.SESSION_SECRET,
-    store: sessionStore,
-    resave: false,
-    saveUninitialized: false,
-    proxy: true,
+    name: "mongo-blog-session",
     cookie: {
-      maxAge: 1000 * 60 * 60 * 24,
+      maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
     },
+    store,
+    resave: true,
+    saveUninitialized: false,
   })
 );
 

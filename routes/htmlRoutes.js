@@ -20,12 +20,10 @@ router.get("/private", checkAuth, ({ session: { isLoggedIn } }, res) => {
   res.render("protected", { isLoggedIn });
 });
 
-router.get('/movies', ({ session: { isLoggedIn } }, res) => {
-  res.render("movie", { isLoggedIn });
-});
+//works
+router.get('/pets', controllers.pets.getAll);
 
-router.get('/list', checkAuth, async (req, res)=> {
-  res.render('list')
-})
+//displays a blank index page...
+router.get("/pets/:id", controllers.pets.get);
 
 module.exports = router;

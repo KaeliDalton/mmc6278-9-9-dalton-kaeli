@@ -1,0 +1,13 @@
+{{> header}}
+<main>
+<h1>Your Pets!</h1>
+{{#each pets}}
+  {{#if isCat}}
+    {{> cat}}
+  {{/if}}
+  {{#if isDog}}
+    {{> dog}}
+  {{/if}}
+  {{> info}}
+{{/each}}
+</main>

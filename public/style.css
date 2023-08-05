@@ -50,7 +50,11 @@ h3 {
 }
 
 a {
-  color: var(--secondary-light);
+  color: var(--secondary);
+  transition: color 200ms;
+}
+a.main-page {
+  color: var(--dark-grey);
   transition: color 200ms;
 }
 a:hover,
@@ -61,7 +65,7 @@ a:focus {
 button.btn {
   border: var(--text-color);
   border-radius: 4px;
-  background-color: var(--secondary-light);
+  background-color: var(--secondary);
   padding: calc(var(--space) * 0.75) calc(var(--space) * 2);
   cursor: pointer;
   transition: background-color 200ms;
@@ -69,7 +73,7 @@ button.btn {
 button.btn-text {
   border: none;
   background-color: transparent;
-  color: var(--secondary-light);
+  color: var(--text-color);
   transition: 200ms;
   cursor: pointer;
 }
@@ -135,5 +139,8 @@ header .site-logo {
   }
   header a {
     margin: calc(var(--space) / 2);
+  }
+  img.img-dog {
+    width: 300px;
   }
 }

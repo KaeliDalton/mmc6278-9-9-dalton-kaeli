@@ -1,11 +1,8 @@
-const mysql = require("mysql2");
+const mongoose = require("mongoose");
+const MONGODB_URI =
+  process.env.MONGODB_URI || `mongodb://localhost:27017/${process.env.DB_NAME}`;
 
-const config = process.env.JAWSDB_URL || {
-  connectionLimit: 10,
-  host: "localhost",
-  user: "root",
-  database: process.env.DB_NAME,
-};
-const db = mysql.createPool(config);
+mongoose.connect(MONGODB_URI);
 
-module.exports = db.promise();
+module.exports = { connection: mongoose.connection, MONGODB_URI };
+
