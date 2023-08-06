@@ -3,12 +3,14 @@
 {{/if}}
 {{#unless isLoggedIn}}
 <a class="site-logo" href="/">
-  <h1>Show Off Your Pet!</h1>
+  <h1>PetShare</h1>
 </a>
 {{/unless}}
 <main>
-  <div>
-  {{> cat}}
+  <div class="photos">
+    <img src="http://placekitten.com/100/300">
+      <img src="http://placekitten.com/200">
+        <img src="http://placekitten.com/150/200">
   </div>
 <button class="btn">
   <a href="/pets"  class="main-page">See Our Pets</a> 

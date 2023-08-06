@@ -69,6 +69,7 @@ button.btn {
   padding: calc(var(--space) * 0.75) calc(var(--space) * 2);
   cursor: pointer;
   transition: background-color 200ms;
+  margin: 20px;
 }
 button.btn-text {
   border: none;
@@ -127,6 +128,16 @@ header .site-logo {
 .login-form input {
   margin-bottom: calc(var(--space) * 2);
   padding: calc(var(--space) * 0.5) calc(var(--space) * 1);
+}
+.photos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: calc(var(--space) * 3) 0;
+  width: 300px;
+}
+#formDiv {
+  display: none;
 }
 
 @media screen and (max-width: 700px) {

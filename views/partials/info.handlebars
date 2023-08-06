@@ -1,9 +1,13 @@
-<a class="display-pet-Link" href="/pets/{{name}}">
-    <h2>{{name}}</h2>
-  </a>
+<h2>{{name}}</h2>
   <p>
      {{type}}
   </p>
+  {{#if owner}}
   <p>
-    {{owner}}
+   Owned by:
+    {{#each owner}}
+      {{name}},
+    {{/each}}
   </p>
+  {{/if}}
+  

@@ -24,6 +24,9 @@ const PetSchema = new Schema({
   },
   isDog: {
     type: Boolean,
+  },
+  likes: {
+    type: String,
   }
 })
 

@@ -20,10 +20,10 @@ router.get("/private", checkAuth, ({ session: { isLoggedIn } }, res) => {
   res.render("protected", { isLoggedIn });
 });
 
-//works
+
 router.get('/pets', controllers.pets.getAll);
 
-//displays a blank index page...
+
 router.get("/pets/:id", controllers.pets.get);
 
 module.exports = router;

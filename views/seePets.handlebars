@@ -2,6 +2,7 @@
 <main>
 <h1>Your Pets!</h1>
 {{#each pets}}
+<br />
   {{#if isCat}}
     {{> cat}}
   {{/if}}
@@ -9,5 +10,7 @@
     {{> dog}}
   {{/if}}
   {{> info}}
+<a class="display-pet-Link" href="/pets/{{_id}}"> See this pet's page here!</a>
+<br />
 {{/each}}
 </main>
