@@ -45,13 +45,19 @@ This app is also available at: https://petshare-final-project-182d2c06788f.herok
 ## Usage
 Start at our home page, featuring photos of some of the animals featured on our site.
 
+<img width="1676" alt="Screenshot 2023-08-06 at 8 34 35 PM" src="https://github.com/KaeliDalton/mmc6278-9-9-dalton-kaeli/assets/111916086/8fc95b85-bb1d-44c1-8575-289c19dbfddf">
+
 From the main page, click to see the list of pets currently on our site.
+
+<img width="1661" alt="Screenshot 2023-08-06 at 8 34 43 PM" src="https://github.com/KaeliDalton/mmc6278-9-9-dalton-kaeli/assets/111916086/fab1a08d-ef4a-4cb6-965d-de468583f7f4">
 
 Once on our pet list, you can click the link below each pet's information to find out more about them.
 
-If you're feeling inspired by our pet list or a specific pet's profile, you can use the form at the bottom of the page to add your own pet!
+<img width="1678" alt="Screenshot 2023-08-06 at 8 34 49 PM" src="https://github.com/KaeliDalton/mmc6278-9-9-dalton-kaeli/assets/111916086/607464d7-fd35-4540-bf74-cc0672ff195e">
 
-From the insomnia collection, you can add, update, or delete information about your pet using HTML requests. 
+If you're feeling inspired by our pet list or a specific pet's profile, you can use the form at the bottom of the page to add your own pet! From the insomnia collection, you can add, update, or delete information about your pet using HTML requests. 
+
+<img width="1600" alt="Screenshot 2023-08-06 at 8 34 56 PM" src="https://github.com/KaeliDalton/mmc6278-9-9-dalton-kaeli/assets/111916086/d1881526-6de2-4ffd-bc58-95c612d5fb2b">
 
 
 ## License
