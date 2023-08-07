@@ -1,6 +1,6 @@
 {{> header}}
 <main>
-<h1>Your Pets!</h1>
+<h1>Featured Pets!</h1>
 {{#each pets}}
 <br />
   {{#if isCat}}
@@ -14,3 +14,7 @@
 <br />
 {{/each}}
 </main>
+<div class="form-div">
+<h3>Feeling inspired? Add your pet below!</h3>
+{{> form}}
+</div>

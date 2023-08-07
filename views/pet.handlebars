@@ -7,45 +7,18 @@
   {{#each pets}}
   {{> info-individual}}
 {{#if isCat}}
-{{> cat}}
+  {{> cat}}
 {{/if}}
 {{#if isDog}}
-{{> dog}}
+  {{> dog}}
 {{/if}}
 {{/each}}
 {{else}}
 <h3>No Pet Information Found</h3>
 {{/if}}
 <br />
-<button class="btn form-btn" id="btn">Add Your Pet!</button>
-<button class="btn delete-btn" data-pet-id="{{petId}}" id="delete-btn">Remove This Pet!</button>
-<div id="formDiv">
+</main>
+<div class="form-div">
+<h3>Feeling inspired? Add your pet below!</h3>
 {{> form}}
 </div>
-</main>
-<script>
-  const btn = document.getElementById('btn')
-  btn.addEventListener('click', () => {
-    const form = getElementById('formDiv')
-    if (form.style.display === 'none'){
-      form.style.display = 'block'
-    } else {
-      form.style.display = 'none'
-    }
-  })
-  
-  document.querySelectorAll('.delete-btn').forEach(button => {
-    button.onclick = function(e) {
-      fetch(`/api/post/${e.target.dataset.petId}`, {
-        method: 'DELETE',
-      })
-      .then(res => {
-        if (res.status === 200) {
-          const {pathname} = window.location
-          window.location.replace(pathname)
-          window.location.reload()
-        }
-      })
-    }
-  })
-</script>

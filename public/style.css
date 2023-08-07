@@ -59,7 +59,7 @@ a.main-page {
 }
 a:hover,
 a:focus {
-  color: var(--secondary);
+  color: var(--text-color);
 }
 
 button.btn {
@@ -93,7 +93,9 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--black);
-  margin-bottom: calc(var(--space) * 6);
+  margin-bottom: calc(var(--space) * 3);
+  padding-left: 10px;
+  padding-right: 10px;
 }
 header a {
   margin: var(--space);
@@ -131,14 +133,37 @@ header .site-logo {
 }
 .photos {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   padding: calc(var(--space) * 3) 0;
+}
+
+.card {
+  width: 40%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+form input {
   width: 300px;
-}
-#formDiv {
-  display: none;
-}
+ }
+ 
+ .form-div {
+   box-sizing: border-box;
+   width: 100%;
+   max-width: 960px;
+   margin: 0 auto;
+   padding: var(--space) calc(var(--space) * 3);
+   text-align: center;
+ }
 
 @media screen and (max-width: 700px) {
   .site-logo {
